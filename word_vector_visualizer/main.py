@@ -29,8 +29,6 @@ def plot(embeddings, labels):
 
 
 def run(vector_file_name='vectors.txt', num_points=400):
-    print('hello')
-
     first_line = True
     index_to_word = []
     with open(f'vectors/{vector_file_name}', 'r') as f:
