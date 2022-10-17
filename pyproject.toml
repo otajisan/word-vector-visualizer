@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "word-vector-visualizer"
+version = "0.1.0"
+description = "This is a tool to visualize word vectors created by word2vec"
+authors = ["otajisan <mtaji@morningcode.io>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "word_vector_visualizer"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
