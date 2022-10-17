@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "word-vector-visualizer"
+version = "0.1.0"
+description = "This is a tool to visualize word vectors created by word2vec"
+authors = ["otajisan <mtaji@morningcode.io>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "word_vector_visualizer"}]
+
+[tool.poetry.scripts]
+hello = "word_vector_visualizer.main:hello"
+visualize = "word_vector_visualizer.main:run"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+matplotlib = "^3.6.1"
+scikit-learn = "^1.1.2"
+japanize-matplotlib = "^1.1.3"
+numpy = "^1.23.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.3"
+pytest-mock = "^3.10.0"
+pytest-cov = "^4.0.0"
+tox = "^3.26.0"
+pytest-emoji = "^0.2.0"
+flake8 = "^5.0.4"
+flake8-import-order = "^0.18.1"
+readme-renderer = "^37.2"
+pytest-sugar = "^0.9.5"
+coverage = "^6.5.0"
+black = "^22.10.0"
+isort = "^5.10.1"
+pyproject-flake8 = "^5.0.4.post1"
+
+[tool.flake8]
+exclude = ".venv,.git,.tox,dist,doc,*lib/python*,*egg,build,.git,.vscode,.idea"
+show-source = true
+max-line-length = 100
+max-complexity = 10
+ignore = "F0010,F401,E203,W503,W504"
+
+[tool.black]
+exclude = ".venv,.git,.tox,dist,doc,*lib/python*,*egg,build,.git,.vscode,.idea"
+line-length = 100
+include = '\.py$'
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
